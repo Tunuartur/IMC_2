@@ -2,26 +2,100 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:id="@+id/main"
+    android:background="@drawable/download"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/imc"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#000000"/>
 
-    <EditText
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/alturaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/app_altura"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/alturatEditText"
+                android:layout_width="111dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:autofillHints=""
+                android:hint="@string/app_cm"
+                android:inputType="numberDecimal"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/pesoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/app_peso"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/pesoEditText"
+                android:layout_width="111dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:autofillHints=""
+                android:hint="@string/app_kg"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/mainButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        />
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/app_calcular"
+        android:textStyle="bold" />
 
 
 
