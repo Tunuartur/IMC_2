@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">IMC</string>
-    <string name="app_altura">Altura</string>
+    <string name="app_altura">Altura:</string>
     <string name="app_cm">Cm</string>
-    <string name="app_peso">Peso</string>
+    <string name="app_peso">Peso:</string>
     <string name="app_kg">Kg</string>
     <string name="app_calcular">Calcular</string>
 
