@@ -5,17 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="@drawable/download"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
-        android:layout_width="200dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="80dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
         android:src="@drawable/imc"
         app:civ_border_color="#000000"
         app:civ_border_width="2dp" />
@@ -46,7 +47,7 @@
                 android:layout_marginStart="10dp"
                 android:autofillHints=""
                 android:hint="@string/app_cm"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:textColor="@color/white" />
 
         </TableRow>
@@ -97,5 +98,14 @@
         android:text="@string/app_calcular"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/resultadoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/white"/>
 
 </LinearLayout>

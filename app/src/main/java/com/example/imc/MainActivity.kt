@@ -27,13 +27,16 @@ class MainActivity : AppCompatActivity() {
         button = findViewById(R.id.mainButton)
         alturaEditText = findViewById(R.id.alturatEditText)
         pesoEditText = findViewById(R.id.pesoEditText)
+        resultado = findViewById(R.id.resultadoTextView)
 
         button.setOnClickListener{
             if (validarEntrada()) {
                 val altura:Double = alturaEditText.text.toString().toDouble()
                 val peso:Double = pesoEditText.text.toString().toDouble()
 
-                val imc = peso / (altura*altura)
+                val alturaM = altura / 100
+
+                val imc = peso / (alturaM * alturaM)
                 when{
                     imc < 18.5 -> resultado.text = getString(R.string.underweight)
                     imc in 18.5..24.9 -> resultado.text = getString(R.string.normal)
